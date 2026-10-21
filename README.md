@@ -24,7 +24,7 @@ Hệ thống Quản lý Hợp đồng được triển khai dạng Containerizat
 ### 2. Các bước khởi chạy
 ```bash
 # Clone repository
-git clone [https://github.com/dtc245160018-lctm/DTC245160018_QuanLyHopDong.git](https://github.com/dtc245160018-lctm/DTC245160018_QuanLyHopDong.git)
+git clone [https://github.com/dtc245160018-lgtm/DTC245160018_QuanLyHopDong.git](https://github.com/dtc245160018-lgtm/DTC245160018_QuanLyHopDong.git)
 
 # Di chuyển vào thư mục dự án
 cd DTC245160018_QuanLyHopDong
