@@ -18,7 +18,7 @@
 
 ### Phase 2: Thực hiện tạo 3 mốc Commit theo đúng yêu cầu đề bài
 
-Đề bài yêu cầu có **ít nhất 03 commit có ý nghĩa** ứng với các giai đoạn triển khai[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span):
+Đề bài yêu cầu có **ít nhất 03 commit có ý nghĩa**:
 
 <Steps>
   <Step title="Mốc 1: Commit cho Nginx Reverse Proxy (Commit 1)">
@@ -55,7 +55,7 @@
    - Để chế độ **Public**.
 
 2. **Liên kết và Đẩy code lên GitHub:**
-   Gõ các lệnh sau trong Terminal WSL (thay URL bằng link Repo của Tuấn):
+   Gõ các lệnh sau trong Terminal WSL:
    ```bash
    git branch -M main
    git remote add origin https://github.com/<tai-khoan-github-cua-tuan>/<ten-repo>.git
