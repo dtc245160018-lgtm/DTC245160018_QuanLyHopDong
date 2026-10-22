@@ -52,6 +52,8 @@ services:
     image: dpage/pgadmin4
     container_name: contract_pgadmin
     restart: always
+    ports:
+      - "8080:80"
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@domain.com
       PGADMIN_DEFAULT_PASSWORD: StrongAdminPass123!
@@ -78,6 +80,8 @@ services:
     image: prom/prometheus:latest
     container_name: contract_prometheus
     restart: always
+    ports:
+      - "9090:9090"
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus_data:/prometheus
@@ -117,3 +121,17 @@ services:
       - /var/log:/var/log:ro
     networks:
       - monitor-net
+
+  # 9. cAdvisor (Container Monitoring)
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.47.0
+    container_name: contract_cadvisor
+    restart: always 
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    networks:
+      - backend-net    
